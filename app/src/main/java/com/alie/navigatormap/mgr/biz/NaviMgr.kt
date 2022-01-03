@@ -6,6 +6,4 @@ package com.alie.navigatormap.mgr.biz
  *（暂不使用）
  */
 interface NaviMgr {
-    fun startCruise()
-    fun stopCruise()
 }

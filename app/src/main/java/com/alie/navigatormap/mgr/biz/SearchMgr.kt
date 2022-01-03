@@ -11,8 +11,4 @@ interface SearchMgr {
     fun detailSearch()
     fun alongWaySearch()
     fun nearestSearch()
-    fun addSearchHistory()
-    fun delSearchHistory()
-    fun getSearchHistory()
-    fun clearSearchHistory()
 }

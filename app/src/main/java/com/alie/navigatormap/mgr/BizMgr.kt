@@ -12,9 +12,9 @@ import com.alie.navigatormap.mgr.biz.ConfigMgr
  * 版本
  */
 interface BizMgr {
-    fun getMapMgr(): MapMgr
-    fun getSearchMgr(): SearchMgr
-    fun getRouteMgr(): RouteMgr
-    fun getNaviMgr(): NaviMgr
-    fun getConfigMgr():ConfigMgr
+    fun getMapMgr(): MapMgr // 主图业务
+    fun getSearchMgr(): SearchMgr // 搜索业务
+    fun getRouteMgr(): RouteMgr // 算路业务（暂不使用）
+    fun getNaviMgr(): NaviMgr // 巡航导航业务（暂不使用）
+    fun getConfigMgr():ConfigMgr // 主屏配置业务
 }

@@ -10,4 +10,9 @@ interface SyncMgr {
     fun connect()
     fun disConnect()
     fun destroy()
+
+    fun addOperateHistory()
+    fun delOperateHistory()
+    fun getOperateHistory()
+    fun clearOperateHistory()
 }

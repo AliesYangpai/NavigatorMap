@@ -6,5 +6,4 @@ package com.alie.navigatormap.mgr.biz
  * 版本
  */
 interface RouteMgr {
-    fun calRoute()
 }
