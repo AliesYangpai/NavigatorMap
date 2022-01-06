@@ -3,6 +3,7 @@ package com.alie.navigatormap.mgr
 import com.alie.navigatormap.mgr.common.LayerMgr
 import com.alie.navigatormap.mgr.common.LocationMgr
 import com.alie.navigatormap.mgr.common.SyncMgr
+import com.alie.navigatormap.mgr.common.VehicleMgr
 
 /**
  * Created by wen.tianyu on 2021/12/22.
@@ -27,4 +28,10 @@ interface CommonMgr {
      * @return LayerMgr
      */
     fun getLayerMgr():LayerMgr // 图层经理，主要用于图层更新
+
+    /**
+     * 获取车身数据接口
+     * @return VehicleMgr
+     */
+    fun getVehicleMgr():VehicleMgr
 }
