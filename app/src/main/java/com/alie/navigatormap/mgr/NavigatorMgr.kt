@@ -2,11 +2,42 @@ package com.alie.navigatormap.mgr
 
 /**
  * Created by wen.tianyu on 2021/12/22.
- * 类描述  副驾地图项目中所有业务的管理者
+ * 类描述  副驾地图项目中所有业务的经理
  * 版本
  */
 interface NavigatorMgr {
-    fun getBizMgr(): BizMgr // Biz业务管理者
-    fun getCommonMgr(): CommonMgr // 常规功能管理
-    fun getExtraMgr():ExtraMgr // 额外功能管理
+
+    /**
+     * 关联
+     */
+    fun attach()
+
+
+    /**
+     * 取消关联
+     */
+    fun detach()
+
+    /**
+     * 销毁
+     */
+    fun destroy()
+
+    /**
+     * 获取Biz业务经理
+     * @return BizMgr
+     */
+    fun getBizMgr(): BizMgr
+
+    /**
+     * 获取常规业务经理
+     * @return CommonMgr
+     */
+    fun getCommonMgr(): CommonMgr
+
+    /**
+     * 获取额外业务经理
+     * @return ExtraMgr
+     */
+    fun getExtraMgr():ExtraMgr
 }

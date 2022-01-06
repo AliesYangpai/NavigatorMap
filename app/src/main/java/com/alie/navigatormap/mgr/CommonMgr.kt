@@ -10,7 +10,21 @@ import com.alie.navigatormap.mgr.common.SyncMgr
  * 版本
  */
 interface CommonMgr {
-    fun getSyncMgr(): SyncMgr // 数据同步经理，主要用于接口数据的同步
-    fun getLocationMgr(): LocationMgr // 定位经理，主要用于获取定位数据
+    /**
+     * 获取数据同步经理，主要用于接口数据的同步
+     * @return SyncMgr
+     */
+    fun getSyncMgr(): SyncMgr
+
+    /**
+     * 获取定位经理，主要用于获取定位数据
+     * @return LocationMgr
+     */
+    fun getLocationMgr(): LocationMgr
+
+    /**
+     * 获取图层经理，主要用于图层更新
+     * @return LayerMgr
+     */
     fun getLayerMgr():LayerMgr // 图层经理，主要用于图层更新
 }

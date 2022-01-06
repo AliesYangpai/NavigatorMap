@@ -6,13 +6,49 @@ package com.alie.navigatormap.mgr.common
  * 用于和主屏进行数据同步
  */
 interface SyncMgr {
+
+    /**
+     * 初始化
+     */
     fun init()
+
+    /**
+     * 连接
+     */
     fun connect()
+
+    /**
+     * 断开连接
+     */
     fun disConnect()
+
+    /**
+     * 销毁
+     */
     fun destroy()
 
-    fun addOperateHistory()
-    fun delOperateHistory()
-    fun getOperateHistory()
-    fun clearOperateHistory()
+    /**
+     * 获取主屏状态
+     */
+    fun getDriverStatus()
+
+    /**
+     * 添加POI发送记录
+     */
+    fun addSendPoiHistory()
+
+    /**
+     * 删poi发送记录
+     */
+    fun delSendPoiHistory()
+
+    /**
+     * 获取发送记录
+     */
+    fun getSendPoiHistory()
+
+    /**
+     * 清楚发送记录
+     */
+    fun clearSendPoiHistory()
 }

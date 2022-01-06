@@ -7,5 +7,10 @@ import com.alie.navigatormap.mgr.extra.TrackingMgr
  * 用于管理与基本业务之外的其他功能，比如数据埋点
  */
 interface ExtraMgr {
-    fun getTrackingMgr(): TrackingMgr // 埋点业务管理类（暂不使用）
+    /**
+     * 获取埋点管理者
+     * （暂不使用）
+     * @return TrackingMgr
+     */
+    fun getTrackingMgr(): TrackingMgr
 }

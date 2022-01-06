@@ -8,13 +8,38 @@ import com.alie.navigatormap.mgr.biz.ConfigMgr
 
 /**
  * Created by wen.tianyu on 2021/12/22.
- * 类描述 业务方向管理类
+ * 类描述 Biz业务经理
  * 版本
  */
 interface BizMgr {
-    fun getMapMgr(): MapMgr // 主图业务
+
+    /**
+     * 获取主图业务经理
+     * @return MapMgr
+     */
+    fun getMapMgr(): MapMgr
+
+    /**
+     * 获取搜索业务经理
+     * @return SearchMgr
+     */
     fun getSearchMgr(): SearchMgr // 搜索业务
-    fun getRouteMgr(): RouteMgr // 算路业务（暂不使用）
-    fun getNaviMgr(): NaviMgr // 巡航导航业务（暂不使用）
-    fun getConfigMgr():ConfigMgr // 主屏配置业务
+
+    /**
+     * 获取算路业务经理（暂不使用）
+     * @return RouteMgr
+     */
+    fun getRouteMgr(): RouteMgr
+
+    /**
+     * 获取导航业务经理（暂不使用）
+     * @return NaviMgr
+     */
+    fun getNaviMgr(): NaviMgr
+
+    /**
+     * 获取主屏配置业务经理 （暂不使用）
+     * @return ConfigMgr
+     */
+    fun getConfigMgr():ConfigMgr
 }

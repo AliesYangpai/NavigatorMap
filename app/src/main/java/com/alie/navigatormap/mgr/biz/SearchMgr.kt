@@ -6,9 +6,29 @@ package com.alie.navigatormap.mgr.biz
  * 版本
  */
 interface SearchMgr {
+
+    /**
+     * 关键字搜索
+     */
     fun keywordSearch()
+
+    /**
+     * 周边搜
+     */
     fun aroundSearch()
+
+    /**
+     * 详情搜
+     */
     fun detailSearch()
+
+    /**
+     * 沿途搜（待定）
+     */
     fun alongWaySearch()
+
+    /**
+     * 逆地理搜索
+     */
     fun nearestSearch()
 }

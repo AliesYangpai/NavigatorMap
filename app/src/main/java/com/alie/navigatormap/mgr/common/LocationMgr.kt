@@ -5,5 +5,9 @@ package com.alie.navigatormap.mgr.common
  * 定位相关业务管理者
  */
 interface LocationMgr {
+
+    /**
+     * 获取定位信息
+     */
     fun getLocation()
 }
