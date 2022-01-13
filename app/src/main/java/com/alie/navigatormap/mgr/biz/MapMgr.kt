@@ -13,7 +13,7 @@ interface MapMgr {
     fun updateCenter()
 
     /**
-     * 更新地图显示模式 如 卫星地图、基本地图，地图
+     * 更新地图样式，白天/黑夜
      */
     fun updateMapMode()
 

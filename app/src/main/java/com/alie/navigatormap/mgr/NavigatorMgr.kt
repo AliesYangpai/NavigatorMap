@@ -12,7 +12,6 @@ interface NavigatorMgr {
      */
     fun attach()
 
-
     /**
      * 取消关联
      */
