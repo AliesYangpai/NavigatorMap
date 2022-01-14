@@ -10,7 +10,7 @@ interface NavigatorMgr {
     /**
      * 关联
      */
-    fun attach()
+    fun <T:ApiWrapper> attach(wrapper:T)
 
     /**
      * 取消关联
