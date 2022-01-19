@@ -1,5 +1,7 @@
 package com.alie.navigatormap.mgr.biz
 
+import com.autonavi.ae.route.GeoPoint
+
 
 /**
  * Created by wen.tianyu on 2021/12/22.
@@ -11,7 +13,7 @@ interface MapMgr {
     /**
      * 更新地图中心点
      */
-    fun updateCenter(lon:Double,lat:Double)
+    fun updateCenter(geoPoint: GeoPoint)
 
     /**
      * 更新地图样式，白天/黑夜

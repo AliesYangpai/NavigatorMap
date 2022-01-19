@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding.mapView.onCreate(savedInstanceState)
         mapController = binding.mapView.map
         initShowPosition()
+        initListener()
     }
 
 
@@ -25,8 +26,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initShowPosition() {
-        mapController.myLocationStyle = MyLocationStyle().myLocationType(MyLocationStyle.LOCATION_TYPE_FOLLOW)
-            .interval(2000).showMyLocation(true)
+        mapController.myLocationStyle = MyLocationStyle().myLocationType(MyLocationStyle.LOCATION_TYPE_FOLLOW_NO_CENTER)
+            .interval(4000).showMyLocation(true)
+
+
         mapController.isMyLocationEnabled = true
         showLocation()
     }
@@ -43,6 +46,24 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         binding.mapView.onDestroy()
+    }
+
+    private fun initListener() {
+        binding.cbMapMode.setOnCheckedChangeListener { buttonView, isChecked ->
+            println(" 白天黑夜:isCheck:$isChecked")
+        }
+        binding.cbTraffic.setOnCheckedChangeListener { buttonView, isChecked ->
+            println(" 路况开关:isCheck:$isChecked")
+        }
+        binding.btnZoomIn.setOnClickListener {
+            println("===放大")
+        }
+        binding.btnZoomOut.setOnClickListener {
+            println("===缩小")
+        }
+        binding.btnBackToCar.setOnClickListener {
+            println("===回车位")
+        }
     }
 
 }

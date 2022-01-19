@@ -10,13 +10,13 @@ import java.io.Serializable
  * @property localPoint GeoPoint? 当前车辆的经纬度
  * @constructor
  */
-class SearchRequestParam(
+data class SearchRequestParam(
     val keyword:String,
     val localPoint:GeoPoint? = null,
     val condition: SearchRequestCondition? = null
 ):Serializable
 
-class SearchRequestCondition(
+data class SearchRequestCondition(
     val adCode:String = "",
     val poiPoint: GeoPoint?= null,
     val page:Int = 1,

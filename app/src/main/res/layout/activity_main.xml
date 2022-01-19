@@ -16,4 +16,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
+    <CheckBox
+        android:id="@+id/cbTraffic"
+        android:layout_width="76dp"
+        android:layout_height="56dp"
+        android:text="路况"
+        app:layout_constraintStart_toStartOf="@+id/mapView"
+        app:layout_constraintTop_toTopOf="@+id/mapView"
+        />
+
+    <CheckBox
+        android:id="@+id/cbMapMode"
+        android:layout_width="106dp"
+        android:layout_height="56dp"
+        android:text="白天黑夜模式"
+        app:layout_constraintStart_toEndOf="@id/cbTraffic"
+        app:layout_constraintTop_toTopOf="@id/cbTraffic"
+        />
+
+    <Button
+        android:id="@+id/btnZoomIn"
+        android:layout_width="76dp"
+        android:layout_height="56dp"
+        android:text="放大"
+        app:layout_constraintStart_toStartOf="@+id/cbTraffic"
+        app:layout_constraintTop_toBottomOf="@+id/cbTraffic"
+        />
+    <Button
+        android:id="@+id/btnZoomOut"
+        android:layout_width="76dp"
+        android:layout_height="56dp"
+        android:text="缩小"
+        app:layout_constraintStart_toStartOf="@+id/btnZoomIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnZoomIn"
+        />
+    <Button
+        android:id="@+id/btnBackToCar"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
+        android:text="回车位"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

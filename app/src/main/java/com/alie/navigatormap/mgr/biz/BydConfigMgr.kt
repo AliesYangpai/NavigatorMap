@@ -5,4 +5,4 @@ package com.alie.navigatormap.mgr.biz
  * 配置相关管理者，用于设置主屏相关配置（二期）（暂不使用）
  * 版本
  */
-interface ConfigMgr
+class BydConfigMgr:ConfigMgr

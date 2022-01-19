@@ -5,4 +5,4 @@ package com.alie.navigatormap.mgr.biz
  * 类描述 算路相关管理者 （暂不使用）
  * 版本
  */
-interface RouteMgr
+class BydRouteMgr:RouteMgr
