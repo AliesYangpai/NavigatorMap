@@ -1,12 +1,13 @@
 package com.alie.navigatormap.mgr.biz
 
+import com.alie.navigatormap.mgr.ApiWrapper
 import com.alie.navigatormap.mgr.data.RespBody
 import com.alie.navigatormap.mgr.data.search.CommonSearchResult
 import com.alie.navigatormap.mgr.data.search.POISearch
 import com.alie.navigatormap.mgr.data.search.SearchRequestParam
 import com.alie.navigatormap.mgr.data.search.SearchResult
 
-class BydSearchMgr:SearchMgr {
+class BydSearchMgr(apiWrapper: ApiWrapper?):SearchMgr {
     override fun keywordSearch(
         searchRequestParam: SearchRequestParam,
         callback: (RespBody<CommonSearchResult<POISearch>>) -> Unit

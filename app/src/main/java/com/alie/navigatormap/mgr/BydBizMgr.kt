@@ -2,9 +2,9 @@ package com.alie.navigatormap.mgr
 
 import com.alie.navigatormap.mgr.biz.*
 
-class BydBizMgr : BizMgr {
-    private val mapMgr by lazy { BydMapMgr() }
-    private val searchMgr by lazy { BydSearchMgr() }
+class BydBizMgr(apiWrapper: ApiWrapper?) : BizMgr {
+    private val mapMgr by lazy { BydMapMgr(apiWrapper) }
+    private val searchMgr by lazy { BydSearchMgr(apiWrapper) }
     private val routeMgr by lazy { BydRouteMgr() }
     private val naviMgr by lazy { BydNaviMgr() }
     private val configMgr by lazy { BydConfigMgr() }

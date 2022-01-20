@@ -2,16 +2,19 @@ package com.alie.navigatormap.mgr
 
 class BydNavigatorMgr : NavigatorMgr {
 
-    private val bizMgr by lazy { BydBizMgr() }
+    private var apiWrapper: ApiWrapper? = null
+    private val bizMgr by lazy { BydBizMgr(apiWrapper) }
     private val commonMgr by lazy { BydCommonMgr() }
     private val extraMgr by lazy { BydExtraMgr() }
 
+
     override fun <T : ApiWrapper> attach(wrapper: T) {
-        TODO("Not yet implemented")
+        apiWrapper = wrapper
     }
 
+
     override fun detach() {
-        TODO("Not yet implemented")
+        apiWrapper = null
     }
 
     override fun destroy() {

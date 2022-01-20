@@ -1,26 +1,32 @@
 package com.alie.navigatormap.mgr.biz
 
+import com.alie.navigatormap.mgr.ApiWrapper
+import com.amap.api.maps.AMap
+import com.amap.api.maps.CameraUpdateFactory
 import com.autonavi.ae.route.GeoPoint
 
-class BydMapMgr:MapMgr {
+class BydMapMgr(val apiWrapper: ApiWrapper?) : MapMgr {
     override fun updateCenter(geoPoint: GeoPoint) {
-        TODO("Not yet implemented")
     }
 
-    override fun updateMapMode(status: Boolean) {
-        TODO("Not yet implemented")
-    }
+    override fun updateMapMode(status: Boolean) =
+        when (status) {
+            true -> apiWrapper?.getMapController<AMap>()?.mapType = AMap.MAP_TYPE_NAVI
+            else -> apiWrapper?.getMapController<AMap>()?.mapType = AMap.MAP_TYPE_NIGHT
+        }
+
 
     override fun updateTraffic(status: Boolean) {
-        TODO("Not yet implemented")
+        apiWrapper?.getMapController<AMap>()?.isTrafficEnabled = status
     }
 
     override fun zoomIn() {
-        TODO("Not yet implemented")
+        apiWrapper?.getMapController<AMap>()?.animateCamera(CameraUpdateFactory.zoomIn(), 700, null)
     }
 
     override fun zoomOut() {
-        TODO("Not yet implemented")
+        apiWrapper?.getMapController<AMap>()
+            ?.animateCamera(CameraUpdateFactory.zoomOut(), 700, null)
     }
 
     override fun getScale(): Float {

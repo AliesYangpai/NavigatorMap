@@ -6,4 +6,5 @@ package com.alie.navigatormap.mgr
  *
  */
 interface ApiWrapper {
+    fun<T> getMapController():T
 }
