@@ -6,6 +6,7 @@ import com.alie.navigatormap.databinding.ActivityMainBinding
 import com.alie.navigatormap.mgr.BydApiWrapper
 import com.alie.navigatormap.mgr.BydNavigatorMgr
 import com.alie.navigatormap.mgr.NavigatorMgr
+import com.alie.navigatormap.mgr.data.MapStyle
 import com.amap.api.maps.AMap
 import com.amap.api.maps.model.MyLocationStyle
 
@@ -62,7 +63,10 @@ class MainActivity : AppCompatActivity() {
     private fun initListener() {
         binding.cbMapMode.setOnCheckedChangeListener { buttonView, isChecked ->
             println(" 白天黑夜:isCheck:$isChecked")
-            navigatorMgr.getBizMgr().getMapMgr().updateMapMode(isChecked)
+            navigatorMgr.getBizMgr().getMapMgr().updateMapMode(when(isChecked) {
+                true->MapStyle.DAY
+                else->MapStyle.NIGHT
+            })
         }
         binding.cbTraffic.setOnCheckedChangeListener { buttonView, isChecked ->
             println(" 路况开关:isCheck:$isChecked")

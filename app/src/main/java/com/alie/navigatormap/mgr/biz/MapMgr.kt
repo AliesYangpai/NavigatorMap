@@ -1,5 +1,6 @@
 package com.alie.navigatormap.mgr.biz
 
+import com.alie.navigatormap.mgr.data.MapStyle
 import com.autonavi.ae.route.GeoPoint
 
 
@@ -18,7 +19,7 @@ interface MapMgr {
     /**
      * 更新地图样式，白天/黑夜
      */
-    fun updateMapMode(status: Boolean)
+    fun updateMapMode(@MapStyle status: Int)
 
     /**
      * 变更路况
